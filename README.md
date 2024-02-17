@@ -1,24 +1,55 @@
-# README
+## Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby application which allows users easily create and manage a todo list
 
-Things you may want to cover:
+## Prerequisites
 
-* Ruby version
+Before you begin, ensure you have:
 
-* System dependencies
+* Node.js (https://nodejs.org)
+* Yarn (https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+* Ruby on Rails (https://railsinstaller.org/)
+* Ruby (https://rubyinstaller.org)
 
-* Configuration
+> [!NOTE]
+> Must be downloaded in order to ensure app runs correctly
 
-* Database creation
+## Getting Started
 
-* Database initialization
+### 1. Environment Setup
 
-* How to run the test suite
+Clone the repository
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+git clone https://github.com/Fuoad-Ibrahim/todo_app.git
+```
 
-* Deployment instructions
+Move into the cloned repository
 
-* ...
+```bash
+cd todo_app
+```
+
+Run the following commands to install dependencies
+
+```bash
+gem install bundler
+```
+
+```bash
+bundle install
+```
+
+```bash
+rails db:migrate
+```
+
+### 1. Running the app
+
+Run the command:
+
+```bash
+rails server
+```
+
+This will start the rails server. Access the web app by visiting http://localhost:3000
