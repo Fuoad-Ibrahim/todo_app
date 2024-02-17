@@ -1,0 +1,38 @@
+<p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+  <i class="fas fa-check-square me-1"></i>
+  Updating: <%= @task.title %>
+</p>
+
+<%= form_with(model: task) do |form| %>
+
+<%# Title field  %>
+<div class="field form-group" style="width:100%; border:1px; margin-bottom:10px">
+  <%= form.text_field :title, class: "form-control task-input", placeholder: "Title...", height: "100px" %>
+</div>
+
+<%# Task field  %>
+<div class="field form-group" style="width:100%; border:1px; margin-bottom:10px;">
+  <%= form.text_field :task, class: "form-control task-input", placeholder: "Task...", height: "100px" %>
+</div>
+
+<%# Date field %>
+<div class="field form-group" style="width:100%; border:1px; margin-bottom:10px">
+  <%= form.date_field :deadline, class: "form-control" %>
+</div>
+
+<div class="field form-group">
+    <%= form.number_field :user_id, id: :task_user_id, class: "form-control", value: current_user.id, type: :hidden %>
+</div>
+
+<%# Completed (True/False)  %>
+<div class= "form-check" style="float:right">
+  <%= form.check_box :completed, class: "form-check-input" %>
+  <%= form.label :completed? %>
+</div>
+
+
+<%= form.submit class: "btn btn-secondary" %>
+
+<% end %>
+
+<hr class="my-4">

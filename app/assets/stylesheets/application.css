@@ -1,0 +1,55 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*.btn {
+   white-space: nowrap;
+   text-align: center;
+}*/
+
+/*.task-input {
+	box-sizing: border-box;
+	height: 100%; /* Adjust the height as needed */
+
+/*<%= image_tag ("pencil_paper.jpg"), class: "bg-image", class: "container", style: "opacity: 0.3" %>*/
+
+body {
+        position: relative;
+        background-image: url('/assets/pencil_paper.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+}
+
+#link1 {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}

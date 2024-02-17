@@ -1,0 +1,18 @@
+<p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+  <i class="fas fa-check-square me-1"></i>
+  <%= @task.title %>
+  
+
+</p>
+
+  <%= render @task %>
+
+
+  <div>
+    <%= link_to "Edit this task", edit_task_path(@task) %> |
+    <%= link_to "Back to tasks", tasks_path %>
+
+    <br><br>
+
+    <%= button_to "Delete task", @task, method: :delete, class: "btn btn-secondary" %>
+  </div>

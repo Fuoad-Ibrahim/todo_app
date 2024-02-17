@@ -1,0 +1,17 @@
+<div id="<%= dom_id task %>">
+  <p>
+    <strong>Task:</strong>
+    <%= task.task %>
+  </p>
+
+  <p>
+    <strong>Deadline:</strong>
+    <%= task.deadline %>
+  </p>
+
+  <p>
+    <strong>Completed:</strong>
+    <%= task.completed %>
+  </p>
+
+</div>
